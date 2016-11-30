@@ -1,0 +1,28 @@
+{
+  "name": "redstarter",
+  "version": "0.0.1",
+  "description": "A project starterkit to get up and running for web development. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "David Comdico",
+  "license": "ISC",
+
+  "devDependencies": {
+      "gulp": "^3.9.0",
+      "gulp-autoprefixer": "^2.1.0",
+      "gulp-jshint": "^1.9.0",
+      "node-bourbon": "^4.2.8",
+      "node-neat": "^1.7.2",
+      "gulp-plumber": "^0.6.6",
+      "gulp-sass": "^2.3.1",
+      "gulp-webserver": "^0.9.1",
+      "gulp-sourcemaps": "^1.5.2"
+    }
+
+}
