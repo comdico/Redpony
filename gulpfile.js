@@ -42,7 +42,7 @@ var sassOptions = {
             './bower_components/breakpoint-sass/stylesheets',
             require('node-bourbon').includePaths
         ],
-  sourcemap: true
+  sourcemap: false
 };
 
 var displayError = function(error) {
@@ -90,15 +90,16 @@ var syncOpts = {
 
 gulp.task('sass', function () {
     return gulp.src(paths.scss)
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(plumber({errorHandler: onError}))
     .pipe(prefix(prefixerOptions))
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.cssOutputFolder))
     .pipe(reload({stream:true}))
 });
 
+//not being used in this project - single page website
 gulp.task('templates', function(){
     var data = {
       year: new Date().getFullYear(),
@@ -145,4 +146,4 @@ gulp.task('browsersync', function() {
 //         }));
 // });
 
-gulp.task('default', ['sass', 'watch', 'templates', 'images', 'browsersync']);
+gulp.task('default', ['sass', 'watch', 'images', 'browsersync']);

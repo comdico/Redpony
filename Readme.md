@@ -1,7 +1,6 @@
-#RedStarter by David Comdico
+#RedPony Music
 
-A basic starter toolkit for SCSS prototyping Drupal projects
-The architecture is based on Harry Roberts' Inverted CSS.
+A music website for RedPony Music. Not much to see yet. Just getting started.
 
 ##Getting Started
 
@@ -12,4 +11,4 @@ To get started run 'npm install' and then 'Gulp.'
 http://cssguidelin.es/
 https://sass-guidelin.es
 
-Date:    9/23/16
+Date:    11/30/16

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+
+      <title>Redpony Music</title>
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="Website for Redpony Music, an independent purveyor of aural delicacies.">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/selection-sharer.css" />
+      <link rel="stylesheet" href="css/sc-player-red.css" type="text/css">
+
+      <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+      <script src="js/webfontloader.js"></script>
+  </head>
+  <body>
+
+
+<div role="document" class="page-wrapper">
+<main role="main">
+<header role="banner">
+  <nav class="global-nav">
+    <ul class="logo-list">
+      <li class="logo"><a href="/" title="Home" itemprop="url">
+        <span itemprop="name">Home</span>
+      </a></li>
+    </ul>
+
+    <ul class="album-listing">
+      <li><h1 class="sitename">Redpony</h1></li>
+      <li><h2 class="album-name"><span class="album-album">album:</span>Workprint</h2></li>
+    <ul>
+
+  </nav>
+</header>
+
+<ul class="track-selector-list">
+  <li class="track-selector-one"><a href="#track-one">01</a></li>
+  <li class="track-selector-two"><a href="#track-two">02</a></li>
+  <li class="track-selector-three"><a href="#track-three">03</a></li>
+  <li class="track-selector-four"><a href="#track-four">04</a></li>
+  <li class="track-selector-five"><a href="#track-five">05</a></li>
+  <li class="track-selector-six"><a href="#track-six">06</a></li>
+  <li class="track-selector-seven"><a href="#track-seven">07</a></li>
+  <li class="track-selector-eight"><a href="#track-eight">08</a></li>
+  <li class="track-selector-zero"><a href="#track-zero">00</a></li>
+</ul>
+
+<section class="home-slide">
+  <img class="site-logo" src="img/redpony-logo.png" alt="Redpony Logo">
+  <div class="album-wrapper">
+  <h3 class="album-header">Workprint</h1>
+  <h4 class="album-artist">Redpony </h2>
+  </div>
+
+  <!-- <div class="listen">
+    <a href="#song-one" id="home-hero-bottom-link">
+      <svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+    </a>
+  </div> -->
+
+  <div class="listen">
+    <h4 class="album-listen">Listen</h4>
+    <a href="#track-one" id="home-hero-bottom-link">
+    </a>
+  </div>
+
+  <!-- <div class="home-hero-bottom-anchor"><a href="#home-page-content" id="home-hero-bottom-link"><svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a></div> -->
+
+
+
+  <div class="listen-button"><a href="#home-page-content" id="home-hero-bottom-link">
+    <svg class="icon icon-angle-down"><use xlink:href="#icon-angle-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a></div>
+</section>
+
+<section class="track-one" id="track-one">
+  <div class="track-one-content">
+    <h3 class="album-track">01:Song Title</h3>
+    <p class="album-track-text">Etiam porta sem malesuada magna mollis euismod. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+    <!-- <iframe width="100%" height="160" src="https://clyp.it/mticozoi/widget" frameborder="0"></iframe> -->
+
+    <a href="http://soundcloud.com/redpony/you-dont-know-what-love-is-battle-flip" class="sc-player">My new dub track</a>
+
+
+  </div>
+
+</section>
+
+
+</main>
+</div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+<!-- <script src="js/jquery.sidr.min.js"></script> -->
+<!-- <script src="js/svg4everybody.min.js"></script> -->
+
+<!-- <script src="js/selection-sharer.js"></script> -->
+<!-- <script src="js/hide-header.js"></script> -->
+<!-- <script>
+$('p').selectionSharer();
+</script>
+<script>svg4everybody(); </script>
+<script src="js/main.js"></script> -->
+
+<script type="text/javascript" src="js/soundcloud.player.api.js"></script>
+<script type="text/javascript" src="js/sc-player.js"></script>
+<script type="text/javascript">
+
+  $(function() {
+    // sc-player remote control simulates the click on the play/pause button
+    $(document).on('click','a.sc-remote-link', function(event) {
+      var $link = $(this),
+          $pause = $('.playing a.sc-pause');
+
+      if ($pause.length) {
+        $pause.click();
+      }else{
+        $('a.sc-play:first').click();
+      }
+      return false;
+    });
+
+    // update the remote buttons class, when changing player state
+
+    var toggleLink = function(event) {
+      $('a.sc-remote-link').toggleClass('playing', event.type === 'scPlayer:onMediaPlay');
+    };
+    $(document)
+      .bind('scPlayer:onMediaPlay', toggleLink)
+      .bind('scPlayer:onMediaEnd', toggleLink)
+      .bind('scPlayer:onMediaPause', toggleLink);
+  });
+
+</script>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!-- <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script> -->
+
+        </body>
+    </html>

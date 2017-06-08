@@ -11,3 +11,43 @@
 // 		    height: 49px;
 //     	}
 // }
+
+.listen a {
+  display: inline-block;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+  padding: 6px;
+  background-color: $theme-color;
+  color: #fff;
+  border: 2px solid #fff;
+  }
+
+.listen .icon {
+  width: 46px;
+  height: 46px;
+  fill: #fff;
+  transition: 150ms ease fill,150ms ease border-color;
+  }
+
+//   .apex-dn {
+//     width:0px;
+//     height:0px;
+//     border-left:12px solid transparent;
+//     border-right:12px solid transparent;
+//     border-top:12px solid #fff;
+// }
+
+
+.listen #home-hero-bottom-link:after {
+  content: "";
+  width:0px;
+  height:0px;
+  border-left:12px solid transparent;
+  border-right:12px solid transparent;
+  border-top:12px solid #fff;
+  position:absolute;
+  bottom:27px;
+  left: 50%;
+  margin-left: -12px;
+}

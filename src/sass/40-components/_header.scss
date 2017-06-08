@@ -1,0 +1,40 @@
+header {
+  position: fixed;
+  background-color: $theme-header;
+  width: 100%;
+  z-index: 400;
+}
+.site-logo {
+  margin: 1em 1em 1em 2em;
+}
+
+.global-nav .logo-list {
+  @include span(1 of 12);
+
+  li {
+    list-style-type: none;
+    margin-top: 6px;
+  }
+}
+
+.global-nav .album-listing {
+  @include span(4 of 12);
+  @include pre(1 of 12);
+
+  li {
+    list-style-type: none;
+  }
+}
+
+
+
+.logo a span {
+  @include hide-text;
+  background-image: url(../img/redpony-logo.png);
+  height: 76px;
+  width: 76px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  text-indent: 115%;
+}

@@ -1,9 +1,35 @@
-// .block {
-//   &-page-title-block {
-//     margin:  0;
-//   }
-//
-//   &-local-tasks-block {
-//     margin:  0;
-//   }
-// }
+main {
+    @include container();
+}
+
+.track-one-content {
+    @include span(6 of 12);
+    @include pre(1 of 12);
+    background-color: $positive-bg-color;
+    margin-top: 12em;
+    padding: 0em 4em 2em 2em;
+
+}
+
+.listen {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+
+.track-selector-list {
+    position: fixed;
+    right: 0;
+    width: 8%;
+    // background-color: pink;
+    display: block;
+    top: 7em;
+    z-index: 399;
+    list-style: none;
+    height:75%;
+    overflow-x: scroll;
+    padding-top: 2em;
+  }

@@ -11,3 +11,92 @@ body {
 .wf-active body {
 	 font-family: $font--body;
 }
+
+.album-header {
+  margin:0;
+  font-family: $font--beta;
+  font-weight: 100;
+  font-size: rem(72);
+  color: $main-header-color;
+  letter-spacing: 10px;
+}
+
+.album-artist {
+  font-family: $font--alpha;
+  font-size: rem(36);
+  color:$theme-header;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+
+}
+.album-track {
+  font-family: $font--beta;
+  font-weight: 100;
+  font-size: rem(72);
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+.album-track-text {
+  font-family:$font--body;
+  font-size: rem(18);
+  letter-spacing: -0.31px;
+  line-height: 36px;
+  color:$body-color;
+}
+
+.sitename {
+  font-family:$font--alpha;
+  font-size: rem(36);
+  color: $rev-text-color;
+  letter-spacing: 2px;
+  margin:0;
+  margin-left: -1.2em;
+  text-transform: uppercase;
+}
+
+.album-name {
+  font-family:$font--beta;
+  font-weight: 300;
+  font-size: rem(36);
+  color: $rev-text-color;
+  letter-spacing: 1.1px;
+  margin:0;
+  margin-left: -2.9em;
+  margin-top: -10px;
+
+  .album-album {
+    font-family:$font--alpha;
+    font-size: rem(18);
+    color: $rev-text-color;
+    letter-spacing: 0.55px;
+    margin-right: 10px;
+  }
+}
+
+.album-listen {
+  font-family:$font--beta;
+  font-weight: 300;
+  font-size: rem(16);
+  color: $main-header-color;
+  letter-spacing: 2.5px;
+  margin: 0 0 .5em 0;
+}
+
+.track-selector-list li {
+  font-family:$font--beta;
+  font-size: rem(28);
+  font-weight: 300;
+  letter-spacing: -0.41px;
+  height: 11%;
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: #000;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $theme-color;
+  }
+
+}
