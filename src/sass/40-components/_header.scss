@@ -3,13 +3,33 @@ header {
   background-color: $theme-header;
   width: 100%;
   z-index: 400;
+
+  @include breakpoint($bp--xxsmall-up) {
+    display: none;
+  }
+  @include breakpoint($bp--large-up) {
+    display:block;
+  }
 }
+
 .site-logo {
-  margin: 1em 1em 1em 2em;
+
+  @include breakpoint($bp--xxsmall-up) {
+    margin: 0 0 0 .5em;
+    padding-right:6em;
+  }
+  @include breakpoint($bp--medium-up) {
+    padding-right:10em;
+  }
+  @include breakpoint($bp--large-up) {
+    margin: 1em 1em 1em 2em;
+  }
 }
 
 .global-nav .logo-list {
   @include span(1 of 12);
+    margin-top: 0;
+    margin-bottom: 0;
 
   li {
     list-style-type: none;
@@ -19,7 +39,16 @@ header {
 
 .global-nav .album-listing {
   @include span(4 of 12);
-  @include pre(1 of 12);
+  margin-top: 0;
+  margin-bottom: 0;
+  @include breakpoint($bp--medium-up) {
+      @include pre(1 of 12);
+      padding-left: 5em;
+  }
+  @include breakpoint($bp--xxlarge-up) {
+      @include pre(1 of 12);
+      padding-left: 3.5em;
+  }
 
   li {
     list-style-type: none;
@@ -36,5 +65,5 @@ header {
   display: inline-block;
   background-color: white;
   border-radius: 50%;
-  text-indent: 115%;
+  text-indent: -9999px;
 }

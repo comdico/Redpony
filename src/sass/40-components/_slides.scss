@@ -1,16 +1,66 @@
 .home-slide {
   background-color: $bg-color;
-  background: url(../img/October0003.jpg) no-repeat center center fixed;
+  background: url(../img/October0003.jpg) no-repeat center center;
   height: 100vh;
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
   z-index: 500;
   position: relative;
-  background-size: cover; 
+  background-size: cover;
+  background-origin: content-box;
+  @include breakpoint($bp--xxsmall-up) {
+  background-attachment: local;
+  background-position-x: 35%;
+  }
+  // @include breakpoint($bp--medium-up) {
+  // // background-position-x: -80px;
+  // }
+
+  @include breakpoint($bp--ipad-up) {
+  background-position-x: 40%;
+  }
+  @include breakpoint($bp--large-up) {
+  // background-position-x: 0%;
+  }
+  @include breakpoint($bp--xlarge-up) {
+  background-position-x: 0px;
+  }
+  @include breakpoint($bp--xlarge-fixed) {
+  background-attachment: fixed;
+  }
 
 
   .album-wrapper {
-    @include span(6 of 12 at 6 last);
-    margin-top: 19%;
+
+    @include breakpoint($bp--xxsmall-up) {
+      @include span(9 of 12 at 3 last);
+          margin-top: 5%;
+    }
+    @include breakpoint($bp--medium-up) {
+      @include span(8 of 12 at 4 last);
+          margin-top: 19%;
+    }
+
+    @include breakpoint($iphone-landscape) {
+          margin-top: -2em;
+    }
+    @include breakpoint($bp--large-up) {
+      @include span(7 of 12 at 5 last);
+          margin-top: 19%;
+    }
+    @include breakpoint($bp--xlarge-up) {
+      @include span(6 of 12 at 6 last);
+          margin-top: 10em;
+    }
+    @include breakpoint($bp--xxlarge-up) {
+      @include span(6 of 12 at 6 last);
+          margin-top: 10em;
+    }
+    @include breakpoint($bp--xxxlarge-up) {
+      @include span(7 of 12 at 5 last);
+          margin-top: 10em;
+    }
+
 
     .album-header, .album-artist {
       text-align: right;
@@ -19,9 +69,106 @@
   }
 }
 
+.tracks {
+  @include breakpoint($bp--xxsmall-up) {
+    height: 100vh;
+    width: 100vw;
+  }
+  @include breakpoint($bp--ipad-up) {
+    height: 70vh;
+    width: 92vw;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    height: 110vh;
+    width: 92vw;
+  }
+}
+
 .track-one {
-  background: url(../img/PAR65574.jpg) no-repeat left center fixed;
-  height: 100vh;
-  width: 92vw;
-  background-size: cover;
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-one.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-two {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-two.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-three {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-three.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-four {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-four.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-five {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-five.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-six {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-six.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-seven {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-seven.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-eight {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-eight.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+.track-nine {
+  @include breakpoint($bp--xxsmall-up) {
+    background: none;
+  }
+  @include breakpoint($bp--xlarge-up) {
+    background: url(../img/track-nine.jpg) no-repeat left center fixed;
+    background-size: cover;
+  }
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 668px)
+and (orientation : landscape) {
+  .home-slide {background-position-x: 0px;}
 }

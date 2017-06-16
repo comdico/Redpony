@@ -33,7 +33,7 @@ var paths = {
 var dest = 'public/';
 
 var sassOptions = {
-  outputStyle: 'compressed',
+  outputStyle: 'compressed', //expanded or compressed
   includePaths: [
             './bower_components/susy/sass',
             './bower_components/susy/lib',
@@ -90,11 +90,11 @@ var syncOpts = {
 
 gulp.task('sass', function () {
     return gulp.src(paths.scss)
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(plumber({errorHandler: onError}))
     .pipe(prefix(prefixerOptions))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.cssOutputFolder))
     .pipe(reload({stream:true}))
 });

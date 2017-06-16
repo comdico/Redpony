@@ -1,16 +1,11 @@
-/**
- *
- * Settings variables
- *
- */
 // SUSY
 $susy: (
-  debug: (
-    image: show,
-    color: rgba(#66f, .25),
-    output: overlay,
-    toggle: bottom right,
-  ),
+  // debug: (
+  //   image: show,
+  //   color: rgba(#66f, .25),
+  //   output: overlay,
+  //   toggle: bottom right,
+  // ),
   columns: 12,
   gutters: 1/12,
   global-box-sizing: border-box,
