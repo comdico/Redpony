@@ -8,7 +8,7 @@ main {
 
     @include breakpoint($bp--xxsmall-up) {
       margin-top: 0em;
-      @include span(10 of 12);
+      @include span(12 of 12);
       @include pre(0 of 12);
       padding: 0em 1em 2em 2em;
     }
@@ -16,7 +16,7 @@ main {
     //   @include span(11 of 12);
     // }
     @include breakpoint($bp--ipad-up) {
-      @include span(11 of 12);
+      @include span(12 of 12);
     }
     @include breakpoint($bp--large-up) {
       margin-top: 12em;
@@ -73,7 +73,6 @@ main {
 
 .track-selector-list {
     position: fixed;
-    display: block;
     z-index: 399;
     list-style: none;
     // overflow-x: scroll;
@@ -86,12 +85,14 @@ main {
        top: 0em;
        right: 1em;
        height:85%;
+       display: none;
     }
     @include breakpoint($bp--large-up) {
         width: 8%;
         top: 5em;
         height:75%;
         right: 1em;
+        display: block;
     }
     @include breakpoint($bp--xlarge-up) {
         width: 8%;
